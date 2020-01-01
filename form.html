@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="main u-pt-48">
+
+            <div class="card">
+                <div class="row">
+                    <div class="col-2-3">
+                        <div class="show u-padding-32">
+                            <h1 class="u-mb-24">Tzy-Ting's Happy Ramen</h1>
+                            <p>Does my 'Ramen' lookes delicious? Tell me your opinion.</p>
+                        </div>
+                    </div>
+                    <div class="col-1-3">
+                        <div class="table form u-padding-32 u-mt-24 ">
+                            <div class="input-container">
+                                <input type="text" class="js-input" required>
+                                <label class="label-text" for="">Name</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="email" name="email" id="email" class="js-input" required>
+                                <label class="label-text" for="email">Email</label></div>
+                            <div class="input-container">
+                                <textarea class="js-input" cols="30" rows="10"></textarea>
+                                <label class="label-text" for="">Opinion</label>
+                            </div>
+                            <div class="submit">
+                                <input type="submit" value="SUBMIT" class="btn">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <div class="thank">
+
+        </div>
+    </div>
+<!-- JS -->
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+    // 當 input 是 focus 的狀態下
+		$(".js-input").focus(function(){
+			// 找到 .label-text 元素並加上 .is-active
+			$(this).parent().find(".label-text").addClass("go-up");
+        })
+        
+        $(".js-input").blur(function(){
+            if($(this).val().length == 0){
+                $(this).parent().find(".label-text").removeClass("go-up");
+            }
+        })
+
+</script>
+
+
+</script>
+</body>
+
+</html>
